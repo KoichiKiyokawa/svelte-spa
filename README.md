@@ -1,7 +1,12 @@
 # Svelte + Firebase Template
+## 使用技術
+- TypeScript
+- Firebase
+- Svelte
+- [Svelte Materialify](https://svelte-materialify.vercel.app/) (Vuetifyみたいなやつ)
 
 ## 使い方
-
+`src/env.ts`にFirebaseのconfigを書きます
 ```bash
 yarn insatll
 yarn dev // => localhost:5000 を開く
