@@ -7,7 +7,11 @@
     "sourceMap": true,
     "strict": true,
     "target": "es2017",
-    "lib": ["dom", "es2020"]
+    "lib": ["dom", "es2020"],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "compileOnSave": true,
   "include": ["src/**/*.ts"]

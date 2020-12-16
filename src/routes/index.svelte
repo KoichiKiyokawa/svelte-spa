@@ -11,7 +11,7 @@
   onMount(async () => {
     grandParent = await new GrandParentRepository('Eg7UMtB2sEiJRKklOsLx').find()
     console.log(grandParent)
-    functions.httpsCallable('helloWorld')({ id: 'Eg7UMtB2sEiJRKklOsLx' })
+    functions.httpsCallable('getGrandParent')({ id: 'Eg7UMtB2sEiJRKklOsLx' })
   })
 
   async function logout() {
