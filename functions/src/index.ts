@@ -11,6 +11,6 @@ glob.sync('./src/**/*.{oncall,pubsub}.ts').forEach((path: string) => {
 
   const [, name] = match // e.g. ファイル名が`foo.oncall.ts`であれば、nameにはfooが入る
   const libPath = path.replace('src/', '').replace('.ts', '') // e.g. パスが`./src/foo.oncall.ts`であれば、`./foo.oncall`
-  const { FUNCTION_NAME } = process.env
-  if (FUNCTION_NAME == null || FUNCTION_NAME === name) exports[name] = require(libPath)[name]
+  const functionName = process.env.K_SERVICE
+  if (functionName == null || functionName === name) exports[name] = require(libPath)[name]
 })
